@@ -24,7 +24,6 @@ Then I tried it with YouTube ASMR videos... wow. It made everything way more imm
   - Windows folks: VB-CABLE
   - Mac folks: BlackHole 2ch
 - **Headphones**: Seriously, use headphones. It's way better that way.
-- **Python** (optional): Only if you want to run from source
 
 ## Getting Started
 
@@ -44,18 +43,7 @@ You need this so the app can "listen" to what your system is playing.
 
 ### Then: Run the App
 
-#### Easy Way: Use the Pre-built Version
-- Just download the latest release for your platform
-- Double-click and run - no installation needed!
-
-#### Developer Way: From Source
-```bash
-# Install the stuff you need
-pip install numpy sounddevice PySide6
-
-# Fire it up
-python main.py
-```
+Just download the latest release for your platform and double-click to run - no installation needed!
 
 ## How to Use It
 
@@ -128,12 +116,7 @@ Your ears (enjoying 3D audio!)
 
 ### About the HRTF Data
 
-The app comes with precomputed HRTF data in the `assets/` folder:
-- **hrtf_params.txt**: Lists all the directions (azimuth/elevation pairs)
-- **hrtf_left.f32**: Left ear filter data for all directions
-- **hrtf_right.f32**: Right ear filter data for all directions
-
-This data comes from KEMAR (a dummy head used for acoustic research), which is a standard dataset in the audio world.
+The app uses precomputed HRTF data that comes from KEMAR (a dummy head used for acoustic research), which is a standard dataset in the audio world. This data helps simulate how sounds change based on direction.
 
 ### Position Control
 
