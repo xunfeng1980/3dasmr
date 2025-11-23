@@ -1,208 +1,197 @@
 # 3D Audio HRTF Controller
 
-A real-time 3D spatial audio processing application that transforms your system audio into immersive binaural audio using Head-Related Transfer Function (HRTF) technology. Perfect for ASMR, music listening, gaming, and any audio experience that benefits from spatial positioning.
+Turn your regular audio into immersive 3D spatial audio! This app uses HRTF (Head-Related Transfer Function) magic to make sounds feel like they're coming from different directions around you. Perfect for ASMR, music, gaming, or just making your audio experience way cooler.
 
 ## Why I Made This
 
-While listening to audiobooks, I found myself getting drowsy. Since I'd been researching spatial audio recently, I created a spatial audio-like effect. Because it uses a human ear model, it's best experienced with headphones.
+So here's the story: I was listening to audiobooks and kept getting sleepy. I'd been tinkering with spatial audio stuff, so I thought - why not make my own 3D audio effect? Since it mimics how your ears actually hear sounds, headphones work best.
 
-Then while listening to YouTube ASMR, I discovered that adding this made it even more immersive and tingly. For certain unusual videos, the effect is probably quite remarkable...
+Then I tried it with YouTube ASMR videos... wow. It made everything way more immersive and tingly. For some videos, the effect is pretty wild. You'll have to try it yourself!
 
-## Features
+## What It Does
 
-- **Real-time Processing**: Captures and processes system audio in real-time with low latency
-- **HRTF-based Spatial Audio**: Uses precomputed HRTF data to create authentic 3D audio positioning
-- **Interactive Controls**: Adjust azimuth (0-360°) and elevation (-40° to 90°) in real-time
-- **Auto Rotation**: Automatically rotates the audio position with adjustable speed
-- **Cross-platform Support**: Works on Windows and macOS
-- **Virtual Audio Device Integration**: Seamlessly captures system audio output
+- **Real-time magic**: Grabs your system audio and processes it on the fly with almost no delay
+- **3D positioning**: Makes sounds feel like they're coming from specific directions using HRTF
+- **Easy controls**: Sliders to move sounds around horizontally and vertically
+- **Auto spin**: Automatically rotates the audio position - you can adjust how fast it goes
+- **Works everywhere**: Windows and macOS support
+- **Just works**: Captures whatever audio your system is playing
 
-## System Requirements
+## What You Need
 
-- **Operating System**: Windows 10/11 or macOS 10.14+
-- **Audio Setup**: 
-  - Windows: VB-CABLE virtual audio driver
-  - macOS: BlackHole 2ch virtual audio driver
-- **Hardware**: Headphones recommended for best experience
-- **Python**: Python 3.8+ (if running from source)
+- **Your computer**: Windows 10/11 or macOS 10.14+
+- **Virtual audio thingy**: 
+  - Windows folks: VB-CABLE
+  - Mac folks: BlackHole 2ch
+- **Headphones**: Seriously, use headphones. It's way better that way.
+- **Python** (optional): Only if you want to run from source
 
-## Installation
+## Getting Started
 
-### Step 1: Install Virtual Audio Driver
+### First: Install the Virtual Audio Driver
+
+You need this so the app can "listen" to what your system is playing.
 
 #### macOS
-1. Download BlackHole 2ch from: https://existential.audio/blackhole/download/
-2. Install BlackHole 2ch
-3. Set BlackHole 2ch as your audio output device in System Preferences > Sound
+1. Grab BlackHole 2ch from: https://existential.audio/blackhole/download/
+2. Install it (just follow the installer)
+3. Go to System Preferences > Sound and set BlackHole 2ch as your output device
 
 #### Windows
 1. Download VB-CABLE from: https://download.vb-audio.com/Download_CABLE/VBCABLE_Driver_Pack45.zip
-2. Install `VBCABLE_Setup_x64.exe`
-3. Set 'CABLE Input' as Default Playback Device in Sound Settings
+2. Run `VBCABLE_Setup_x64.exe` and install it
+3. In Sound Settings, set 'CABLE Input' as your Default Playback Device
 
-### Step 2: Run the Application
+### Then: Run the App
 
-#### Option A: Use Pre-built Executable
-- Download the latest release for your platform
-- Run the executable (no installation required)
+#### Easy Way: Use the Pre-built Version
+- Just download the latest release for your platform
+- Double-click and run - no installation needed!
 
-#### Option B: Run from Source
+#### Developer Way: From Source
 ```bash
-# Install dependencies
+# Install the stuff you need
 pip install numpy sounddevice PySide6
 
-# Run the application
+# Fire it up
 python main.py
 ```
 
-## Usage
+## How to Use It
 
-### Basic Operation
+### Quick Start
 
-1. **Start the Application**: Launch the 3D Audio HRTF Controller
-2. **Verify Setup**: Check the status label - it should show "Virtual Audio: OK"
-3. **Play Audio**: Play any audio from your system (music, videos, games, etc.)
-4. **Adjust Position**: Use the sliders to control the audio position:
-   - **Azimuth**: Horizontal position (0° = front, 90° = right, 180° = back, 270° = left)
-   - **Elevation**: Vertical position (-40° = below, 0° = horizontal, 90° = above)
+1. **Launch the app** - Open 3D Audio HRTF Controller
+2. **Check the status** - Should say "Virtual Audio: OK" (if not, check your driver install)
+3. **Play something** - Start any audio on your computer (music, video, game, whatever)
+4. **Move it around** - Use the sliders to position the sound:
+   - **Azimuth**: Left/right/around you (0° = front, 90° = right, 180° = behind, 270° = left)
+   - **Elevation**: Up/down (-40° = below, 0° = level, 90° = above)
 
-### Controls
+### The Controls
 
-- **Azimuth Slider**: Rotate the audio source horizontally (0-360°)
-- **Elevation Slider**: Adjust vertical position (-40° to 90°)
-- **Auto Rotate Checkbox**: Enable/disable automatic rotation
-- **Speed Control**: Adjust rotation speed (1-180°/s)
-- **Reset Position**: Return to center position (0°, 0°) and stop auto-rotation
-- **Output Device**: Select your preferred audio output device
+- **Azimuth slider**: Spin the sound source around you (0-360°)
+- **Elevation slider**: Move it up or down (-40° to 90°)
+- **Auto Rotate checkbox**: Turn on automatic spinning
+- **Speed control**: How fast it spins (1-180° per second)
+- **Reset button**: Snap back to center and stop auto-rotation
+- **Output device dropdown**: Pick where you want the sound to come out
 
-### Tips for Best Experience
+### Pro Tips
 
-- **Use Headphones**: HRTF effects work best with headphones, as they provide proper channel separation
-- **Start with Auto Rotation**: Enable auto-rotation to experience the 3D effect immediately
-- **Adjust Speed**: Try different rotation speeds to find what feels most immersive
-- **Experiment with Position**: Manually adjust azimuth and elevation to position sounds precisely
+- **Wear headphones**: The 3D effect is way more noticeable with headphones
+- **Try auto-rotate first**: Turn it on and feel the sound moving around you
+- **Play with speed**: Different speeds feel different - find what you like
+- **Get creative**: Manually position sounds to match what you're watching/listening to
 
-## How It Works
+## How It Works (The Nerdy Part)
 
-### Overview
+### The Big Picture
 
-The application captures system audio output through a virtual audio device, applies HRTF-based spatial audio processing, and outputs the processed audio to your speakers or headphones.
+Your system plays audio → Virtual audio device catches it → App processes it with HRTF → You hear 3D audio. Simple!
 
-### Technical Details
+### The Technical Stuff
 
-#### 1. Audio Capture
-- **Input Source**: Virtual audio device (VB-CABLE on Windows, BlackHole on macOS)
-- **Sample Rate**: 48 kHz
-- **Channels**: Stereo (2 channels)
-- **Block Size**: 512 samples (low-latency processing)
+#### Audio Capture
+The app listens to your system audio through a virtual audio device (VB-CABLE on Windows, BlackHole on Mac). It grabs audio at 48 kHz, stereo, in small chunks of 512 samples for low latency.
 
-#### 2. HRTF Processing
+#### HRTF Processing
 
-**HRTF (Head-Related Transfer Function)** is a mathematical model that describes how sound waves interact with the human head, ears, and torso. It captures:
-- **Interaural Time Difference (ITD)**: Time delay between ears
-- **Interaural Level Difference (ILD)**: Volume difference between ears
-- **Spectral Cues**: Frequency-dependent filtering from head and ear shape
+**HRTF** stands for Head-Related Transfer Function. Fancy name, but it's basically a way to simulate how your head and ears change sounds coming from different directions. It accounts for:
+- **Time differences**: Sounds reach your ears at slightly different times
+- **Volume differences**: Your head blocks some sound, so one ear hears it louder
+- **Frequency filtering**: Your head and ear shape change how different frequencies sound
 
-**Processing Pipeline**:
-1. **HRTF Lookup**: For each audio position (azimuth, elevation), find the closest matching HRTF from the precomputed database
-2. **Spatial Positioning**: Apply ±30° offset to left and right channels to create stereo separation
-3. **Convolution**: Convolve input audio with HRTF impulse responses (FIR filters) for each ear
-4. **Overlap-Add**: Use overlap buffers to handle convolution tails and maintain audio continuity
-5. **Gain Control**: Apply gain (0.3) to prevent clipping and optimize output level
+**What the app does**:
+1. **Finds the right HRTF**: Based on where you've positioned the sound (azimuth/elevation), it picks the closest matching HRTF from a database
+2. **Positions it**: Applies a ±30° offset to left and right channels to create stereo separation
+3. **Processes it**: Convolves (fancy word for "filters") the audio with HRTF data for each ear
+4. **Keeps it smooth**: Uses overlap buffers so there are no clicks or pops
+5. **Adjusts volume**: Applies a gain of 0.3 to prevent clipping
 
-#### 3. Audio Output
-- **Output Device**: User-selectable audio output device
-- **Format**: 32-bit float, stereo
-- **Real-time**: Low-latency streaming with callback-based processing
+#### Audio Output
+Sends the processed audio to whatever output device you picked, in 32-bit float format, in real-time.
 
-### Audio Processing Flow
+### The Processing Flow
 
 ```
-System Audio Output
+Your system audio
     ↓
-Virtual Audio Device (VB-CABLE/BlackHole)
+Virtual audio device (catches it)
     ↓
-InputStream (Capture at 48kHz, 512 samples/block)
+App processes it (HRTF magic happens here)
     ↓
-HRTF Processing:
-  - Find closest HRTF for current position
-  - Apply spatial positioning (±30° offset)
-  - Convolve with left/right ear filters
-  - Handle overlap-add for continuity
+Your headphones/speakers
     ↓
-Gain Control (0.3x)
-    ↓
-OutputStream (Playback to selected device)
-    ↓
-Your Headphones/Speakers
+Your ears (enjoying 3D audio!)
 ```
 
-### HRTF Data
+### About the HRTF Data
 
-The application uses precomputed HRTF data stored in the `assets/` directory:
-- **hrtf_params.txt**: Contains azimuth and elevation parameters for each measurement
-- **hrtf_left.f32**: Left ear impulse responses (FIR filters) for all directions
-- **hrtf_right.f32**: Right ear impulse responses (FIR filters) for all directions
+The app comes with precomputed HRTF data in the `assets/` folder:
+- **hrtf_params.txt**: Lists all the directions (azimuth/elevation pairs)
+- **hrtf_left.f32**: Left ear filter data for all directions
+- **hrtf_right.f32**: Right ear filter data for all directions
 
-These files contain measurements from a KEMAR (Knowles Electronics Manikin for Acoustic Research) dummy head, which provides a standard HRTF dataset.
+This data comes from KEMAR (a dummy head used for acoustic research), which is a standard dataset in the audio world.
 
 ### Position Control
 
-- **Azimuth (0-360°)**: Horizontal angle around the listener
-  - 0° = Front
-  - 90° = Right
-  - 180° = Back
-  - 270° = Left
+- **Azimuth (0-360°)**: How far around you the sound is
+  - 0° = Right in front
+  - 90° = To your right
+  - 180° = Behind you
+  - 270° = To your left
 
-- **Elevation (-40° to 90°)**: Vertical angle
-  - -40° = Below horizontal
-  - 0° = Horizontal plane
-  - 90° = Directly above
+- **Elevation (-40° to 90°)**: How high or low
+  - -40° = Below you
+  - 0° = At ear level
+  - 90° = Straight up
 
 ### Auto Rotation
 
-The auto-rotation feature continuously updates the azimuth angle based on:
-- **Rotation Speed**: Degrees per second (configurable 1-180°/s)
-- **Time-based**: Uses system time to calculate smooth rotation
-- **Thread-safe**: Runs in a separate thread with Qt signal-based updates
+The auto-rotate feature smoothly spins the sound around you. You control:
+- **How fast**: 1-180 degrees per second
+- It uses your system clock to keep the rotation smooth
+- Runs in a separate thread so it doesn't freeze the app
 
-## Technical Specifications
+## Technical Specs (For the Curious)
 
-- **Audio Format**: 32-bit float, 48 kHz sample rate
+- **Audio format**: 32-bit float, 48 kHz
 - **Processing**: Real-time convolution with overlap-add
-- **Latency**: ~10-20ms (block size dependent)
-- **HRTF Database**: KEMAR measurements
-- **GUI Framework**: PySide6 (Qt6)
+- **Latency**: About 10-20ms (depends on block size)
+- **HRTF data**: KEMAR measurements
+- **GUI**: PySide6 (Qt6)
 - **Audio I/O**: sounddevice (PortAudio)
 
-## Limitations
+## Current Limitations
 
-- Currently supports Windows and macOS only
-- Requires virtual audio driver installation
-- Best experienced with headphones
-- Fixed gain level (not user-adjustable in current version)
-- HRTF data is based on average head measurements (may vary for individuals)
+- Only Windows and macOS (sorry Linux users, maybe later!)
+- You need that virtual audio driver installed
+- Headphones recommended (speakers work but headphones are way better)
+- Gain is fixed at 0.3 (can't change it yet)
+- HRTF is based on average head measurements (might not be perfect for everyone)
 
-## Future Improvements
+## What's Coming Next
 
-Potential enhancements for future versions:
-- User-adjustable gain control
-- Preset positions for common scenarios
-- Audio visualization (spectrum, 3D position display)
-- Support for additional HRTF datasets
+Ideas for future versions:
+- Adjustable gain control
+- Preset positions (like "front", "behind", "above")
+- Visual feedback (see where the sound is positioned)
+- More HRTF datasets to choose from
 - Linux support
-- Recording/export functionality
+- Record/export processed audio
 
 ## License
 
-[Add your license information here]
+[Add your license info here]
 
 ## Contributing
 
-[Add contribution guidelines if applicable]
+[Add contribution guidelines if you want]
 
-## Acknowledgments
+## Thanks
 
-- HRTF data based on KEMAR measurements
+- HRTF data from KEMAR measurements
 - Virtual audio drivers: BlackHole (macOS) and VB-CABLE (Windows)
-- Audio processing libraries: NumPy, sounddevice
+- Libraries: NumPy, sounddevice
