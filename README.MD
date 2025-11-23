@@ -6,21 +6,12 @@ Then while listening to YouTube ASMR, I discovered that adding this made it even
 
 # Usage
 ## MacOS
-
-1. Install BlackHole 2CH and set the default audio output device to BlackHole 2CH
-```
-brew install --cask blackhole-2ch
-```
-![alt text](assets/image.png)
-
-2. Download main.bin, run it and enable Auto Rotate, or select a different output device
-![alt text](assets/image1.png)
-
-// todo
-3. YouTube 3D ASMR effect demonstration
+1. Download from: https://existential.audio/blackhole/download/
+2. Install BlackHole 2ch
+3. Set BlackHole 2ch as your audio output device
 
 ## Windows
-1. Download from: "https://download.vb-audio.com/Download_CABLE/VBCABLE_Driver_Pack45.zip 
+1. Download from: https://download.vb-audio.com/Download_CABLE/VBCABLE_Driver_Pack45.zip 
 2. Install VBCABLE_Setup_x64.exe
 3. Set \'CABLE Input\' as Default Playback Device in Sound Settings
 
