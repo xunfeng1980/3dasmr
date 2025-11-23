@@ -5,6 +5,7 @@ While listening to audiobooks, I found myself getting drowsy. Since I'd been res
 Then while listening to YouTube ASMR, I discovered that adding this made it even more immersive and tingly. For certain unusual videos, the effect is probably quite remarkable...
 
 # Usage
+## MacOS
 
 1. Install BlackHole 2CH and set the default audio output device to BlackHole 2CH
 ```
@@ -18,6 +19,10 @@ brew install --cask blackhole-2ch
 // todo
 3. YouTube 3D ASMR effect demonstration
 
-# How It Works
+## Windows
+1. Download from: "https://download.vb-audio.com/Download_CABLE/VBCABLE_Driver_Pack45.zip 
+2. Install VBCABLE_Setup_x64.exe
+3. Set \'CABLE Input\' as Default Playback Device in Sound Settings
 
-1. Use BlackHole to capture system audio output, then synthesize spatial audio through HRTF (Head-Related Transfer Function), and finally send it to the speakers
+# How It Works
+1. Use BlackHole/BCABLE to capture system audio output, then synthesize spatial audio through HRTF (Head-Related Transfer Function), and finally send it to the speakers
