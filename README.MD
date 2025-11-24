@@ -4,7 +4,7 @@ Turn any stereo audio into immersive 3D spatial audio using HRTF (Head-Related T
 
 ## The Story Behind This
 
-I spent $26 on ads to test this idea, and 71 ASMR creators clicked on it.
+I spent $200 on ads to test this idea, and 71 ASMR creators clicked on it.
 
 While I didn't end up pursuing commercialization, the data proved there's real market demand.
 
