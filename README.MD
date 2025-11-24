@@ -165,13 +165,21 @@ Ideas for future versions:
 - Linux support
 - Record/export processed audio
 
+## Open Source
+
+This project is open source! The source code is available on GitHub:
+
+**Repository**: [https://github.com/xunfeng1980/3dasmr-pri](https://github.com/xunfeng1980/3dasmr-pri)
+
+Feel free to explore the code, submit issues, or contribute improvements!
+
 ## License
 
-[Add your license info here]
+This project is licensed under the Apache License 2.0. See the [LICENSE](LICENSE) file for details.
 
 ## Contributing
 
-[Add contribution guidelines if you want]
+Contributions are welcome! If you have ideas for improvements or find bugs, please open an issue or submit a pull request on GitHub.
 
 ## Thanks
 

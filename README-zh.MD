@@ -165,13 +165,21 @@
 - Linux 支持
 - 录制/导出处理后的音频
 
+## 开源
+
+这个项目是开源的！源代码可以在 GitHub 上找到：
+
+**代码仓库**: [https://github.com/xunfeng1980/3dasmr-pri](https://github.com/xunfeng1980/3dasmr-pri)
+
+欢迎探索代码、提交问题或贡献改进！
+
 ## 许可证
 
-[在此添加你的许可证信息]
+本项目采用 Apache License 2.0 许可证。详情请参阅 [LICENSE](LICENSE) 文件。
 
 ## 贡献
 
-[如果想的话，添加贡献指南]
+欢迎贡献！如果你有改进想法或发现 bug，请在 GitHub 上提交 issue 或 pull request。
 
 ## 致谢
 
